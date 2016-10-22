@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="/src/lib/require.js"></script>-->
+<script src="/src/lib/dozuki-js/dozuki.js" type="text/javascript"></script>
+<script src="/src/lib/dozuki-js/wrappers/mock.http.js" type="text/javascript"></script>
+<script src="/src/lib/dozuki-js/wrappers/jquery.http.js" type="text/javascript"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
+<script src="/src/js/MyDeviceList.js"></script>
+
+<link rel="stylesheet" href="/src/css/styles.css">
+
+<body>
+  <div ng-app="MyDeviceList" ng-controller="myCtrl">
+    <form ng-submit="queryForDevice()">
+      <input type="text" name="search" placeholder="Search for a device to add.." ng-model="query">
+    </form>
+    <ul>
+      <li ng-repeat="x in products">{{x}}</li>
+    </ul>
+    <ul>
+      <object ng-repeat="x in results">
+        <p><img ng-src="{{x.image.standard}}">{{x.title}}</p>
+      </object>
+    </ul>
+  </div>
+</body>
+
+</html>
