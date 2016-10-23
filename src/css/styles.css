@@ -16,3 +16,14 @@ input[type=text] {
 input[type=text]:focus {
   width: 100%;
 }
+
+#btn {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 54%;
+  z-index: 100001;
+  margin: -45px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
